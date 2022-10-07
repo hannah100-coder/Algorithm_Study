@@ -31,7 +31,7 @@ print(alphabet[1:]) # 리스트 1번부터 끝까지 출력
 print(len(alphabet)) # 리스트 엘리먼트 갯수 출력
 print(alphabet.index('C'))  # 특정 엘리먼트 인덱스 찾기
 
-# 리스트 내림차순 정렬
+# 리스트 오름차순 정렬
 x = [4, 6, 2, 9]
 y = sorted(x)
 print(y)    # [2, 4, 6, 9]
