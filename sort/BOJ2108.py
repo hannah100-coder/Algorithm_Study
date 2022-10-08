@@ -5,12 +5,14 @@ from collections import Counter
 #count = int(input())
 count = int(sys.stdin.readline())
 nums = []
-if count / 2 == 0:
-    print('N은 홀수여야 합니다.')
+if count / 2 == 0 or count == 0:
+    print('input error')
 
 for i in range(count):
     #nums.append(int(input()))
     nums.append(int(sys.stdin.readline()))
+    if nums[i] > 4000:
+        print('input error')
 
 nums.sort()
 
@@ -22,8 +24,11 @@ print(nums[count // 2])
 
 # 최빈값: N개의 수들 중 가장 많이 나타나는 값
 counter = Counter(nums).most_common()
-if counter[0][1] == counter[1][1]:
-    print(counter[1][0])
+if len(nums) > 1:
+    if counter[0][1] == counter[1][1]:
+        print(counter[1][0])
+    else:
+        print(counter[0][0])
 else:
     print(counter[0][0])
 
